@@ -1,0 +1,64 @@
+using UnityEngine;
+using UnityEngine.XR.ARFoundation;
+
+public class InitialSetup : MonoBehaviour
+{
+    [SerializeField] private float requiredArea;
+    [SerializeField] private ARPlaneManager planeManager;
+    [SerializeField] private GameObject startExperienceUI;
+    [SerializeField] private StartExperience startExperience;
+
+    private void OnEnable()
+    {
+        planeManager.planesChanged += OnPlanesUpdated;
+    }
+
+    private void OnDisable()
+    {
+        planeManager.planesChanged -= OnPlanesUpdated;
+    }
+    
+    public void OnClickStartExperience()
+    {
+        startExperienceUI.SetActive(false);
+        planeManager.enabled = false;
+
+        //  foreach (var plane in planeManager.trackables)
+        //  {
+        //    plane.gameObject.SetActive(false);
+        //  }
+        
+        startExperience.OnClickStartExperience(GetBiggestPlane());
+    }
+
+    private void OnPlanesUpdated(ARPlanesChangedEventArgs args)
+    {
+        foreach (var plane in args.updated)
+        {
+            if (plane.extents.x * plane.extents.y >= requiredArea)
+            {
+                startExperienceUI.SetActive(true);
+            }
+        }
+    }
+
+    private ARPlane GetBiggestPlane()
+    {
+        ARPlane biggestPlane = null;
+        float biggestArea = 0f;
+
+        foreach (var plane in planeManager.trackables)
+        {
+            float area = plane.extents.x * plane.extents.y;
+            
+            if (area > biggestArea)
+            {
+                biggestArea = area;
+                biggestPlane = plane;
+            }
+        }
+        
+        return biggestPlane;
+    }
+
+}
