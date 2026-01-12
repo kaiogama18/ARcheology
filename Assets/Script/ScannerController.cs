@@ -45,13 +45,14 @@ public class ScannerController : MonoBehaviour
 
     private IEnumerator StartScanning(ObjectInteractor interactor)
     {
-        animator.SetBool("IsScanning", true);
+        animator.SetBool("isScanning", true);
         scanUI.SetActive(false);
         interactor.SetLocked(true);
+        
 
         yield return new WaitForSeconds(scanDuration);
         
-        animator.SetBool("IsScanning", false);
+        animator.SetBool("isScanning", false);
         scanUI.SetActive(true);
         interactor.SetLocked(false);
         interactor.SetScanned(true);

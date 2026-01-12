@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: SphereInfo
   m_EditorClassIdentifier: 
   title: 'Sphere '
+  icon: {fileID: 21300000, guid: 4216aa950c3d04665ba85191ced11370, type: 3}
   description: Sphere do Lorem ipsum dolor sit amet, consectetur adipiscing elit

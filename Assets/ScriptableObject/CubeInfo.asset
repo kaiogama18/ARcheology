@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: CubeInfo
   m_EditorClassIdentifier: 
   title: Cube
-  description: Cube do Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  icon: {fileID: 21300000, guid: 4216aa950c3d04665ba85191ced11370, type: 3}
+  description: "Muiraquita, antigo amuleto ind\xEDgena da Amaz\xF4nia"
