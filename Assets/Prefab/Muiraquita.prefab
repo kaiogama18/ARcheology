@@ -60,6 +60,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 5bca372d8ba99134c825c5b95ef4edd5, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bdccae4c89b44694c914d33e217cf7ca, type: 2}
     - target: {fileID: 919132149155446097, guid: 5bca372d8ba99134c825c5b95ef4edd5, type: 3}
       propertyPath: m_Name
       value: Muiraquita
@@ -77,7 +81,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5bca372d8ba99134c825c5b95ef4edd5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3836908216071087982}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5bca372d8ba99134c825c5b95ef4edd5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4966405542778481425}
   m_SourcePrefab: {fileID: 100100000, guid: 5bca372d8ba99134c825c5b95ef4edd5, type: 3}
+--- !u!23 &4964314140695701129 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 5bca372d8ba99134c825c5b95ef4edd5, type: 3}
+  m_PrefabInstance: {fileID: 5991296899779344909}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6909706108092417884 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5bca372d8ba99134c825c5b95ef4edd5, type: 3}
@@ -97,6 +109,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectInfo: {fileID: 11400000, guid: 08294056579a64e4087626d3b2004e1c, type: 2}
   infoDisplayHeight: 0.38
+  artefactCleaner: {fileID: 4966405542778481425}
 --- !u!54 &6610746589627007859
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -145,3 +158,17 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.23824508, y: 0.21972601, z: 0.38800776}
   m_Center: {x: 0, y: 0.10670992, z: 0.035610713}
+--- !u!114 &4966405542778481425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6909706108092417884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b35a6dbd63acf644ca8b78e42f0c7e5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clearMaterial: {fileID: 2100000, guid: a6876e5a2eecb414dabeee37b6a500f9, type: 2}
+  artefactRenderer: {fileID: 4964314140695701129}

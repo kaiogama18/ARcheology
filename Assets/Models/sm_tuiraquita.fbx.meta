@@ -7,6 +7,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: M_Tuiraquita
+    second: {fileID: 2100000, guid: 7fedc267a88bdb149b22939c72615df6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: T_Tuiraquita
     second: {fileID: 2100000, guid: 7fedc267a88bdb149b22939c72615df6, type: 2}
   materials:

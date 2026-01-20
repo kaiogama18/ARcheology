@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4375019034541708734}
   - component: {fileID: 1234083474687711061}
   - component: {fileID: 1784516761558383622}
+  - component: {fileID: 5811078764167881807}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -122,6 +123,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectInfo: {fileID: 11400000, guid: a10a9676a56871a4a99a43d19ed25d51, type: 2}
   infoDisplayHeight: 1.65
+  artefactCleaner: {fileID: 5811078764167881807}
 --- !u!54 &1784516761558383622
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -149,6 +151,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &5811078764167881807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2431350739691373639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b35a6dbd63acf644ca8b78e42f0c7e5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clearMaterial: {fileID: 2100000, guid: 7dcd24c8bd7e834488af0d8e03624f0a, type: 2}
+  artefactRenderer: {fileID: 8215670054074836051}
 --- !u!1001 &7332557023589136599
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -209,6 +225,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e4d1d038ad10e7942a0b8ab25e83e46d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e2125dbb889aab2489c5dc81a71c4d73, type: 2}
     - target: {fileID: 919132149155446097, guid: e4d1d038ad10e7942a0b8ab25e83e46d, type: 3}
       propertyPath: m_Name
       value: sm_football
@@ -221,5 +241,10 @@ PrefabInstance:
 --- !u!4 &7082122336600465212 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e4d1d038ad10e7942a0b8ab25e83e46d, type: 3}
+  m_PrefabInstance: {fileID: 7332557023589136599}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &8215670054074836051 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: e4d1d038ad10e7942a0b8ab25e83e46d, type: 3}
   m_PrefabInstance: {fileID: 7332557023589136599}
   m_PrefabAsset: {fileID: 0}

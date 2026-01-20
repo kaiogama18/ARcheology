@@ -10,7 +10,7 @@ public class ObjectInteractor : MonoBehaviour, IInteractable
     
     [SerializeField] private SOObjectInfo objectInfo;
     [SerializeField] private float infoDisplayHeight = 1.5f;
-    
+    [SerializeField] private ArtefactCleaner  artefactCleaner;
     public void OnInteract()
     {
         if(isLocked) return;
@@ -81,5 +81,10 @@ public class ObjectInteractor : MonoBehaviour, IInteractable
     public void SetScanned(bool scanned = true)
     {
         isScanned = scanned;
+
+        if (isScanned && artefactCleaner != null)
+        {
+            artefactCleaner.Clear();
+        }
     }
 }

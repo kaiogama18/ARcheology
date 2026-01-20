@@ -7,8 +7,7 @@ public class InputHandler
 {
     public static bool TryRayCastHit(out RaycastHit hitObject)
     {
-        /*
-         #if ENABLE_INPUT_SYSTEM
+          /*#if ENABLE_INPUT_SYSTEM
             if (UnityEngine.InputSystem.Mouse.current.leftButton.wasPressedThisFrame)
             {
                 Ray  ray = Camera.main.ScreenPointToRay(UnityEngine.InputSystem.Mouse.current.position.ReadValue());
@@ -17,8 +16,7 @@ public class InputHandler
                     return true;
                 }
             }
-        #endif
-		*/
+        #endif*/
 
         if (Touchscreen.current != null && Touchscreen.current.primaryTouch.press.wasPressedThisFrame)
         {

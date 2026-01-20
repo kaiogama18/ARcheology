@@ -48,6 +48,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 3cbdfce97d73b37438300903106d0774, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5e6f4ad198d87b44eb516da2469b9ff0, type: 2}
     - target: {fileID: 919132149155446097, guid: 3cbdfce97d73b37438300903106d0774, type: 3}
       propertyPath: m_Name
       value: Tuiraquita
@@ -65,7 +69,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3cbdfce97d73b37438300903106d0774, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4961105116291728890}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3cbdfce97d73b37438300903106d0774, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5538925615744192236}
   m_SourcePrefab: {fileID: 100100000, guid: 3cbdfce97d73b37438300903106d0774, type: 3}
+--- !u!23 &592145264999443506 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 3cbdfce97d73b37438300903106d0774, type: 3}
+  m_PrefabInstance: {fileID: 2303078128263246006}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1384650774651801063 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3cbdfce97d73b37438300903106d0774, type: 3}
@@ -85,6 +97,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectInfo: {fileID: 11400000, guid: 76e66c29f34606c428711212a16ae433, type: 2}
   infoDisplayHeight: 0.4
+  artefactCleaner: {fileID: 5538925615744192236}
 --- !u!65 &2047034040049158830
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -133,3 +146,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &5538925615744192236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1384650774651801063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b35a6dbd63acf644ca8b78e42f0c7e5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clearMaterial: {fileID: 2100000, guid: 7fedc267a88bdb149b22939c72615df6, type: 2}
+  artefactRenderer: {fileID: 592145264999443506}
