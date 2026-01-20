@@ -39,5 +39,15 @@ Educational and cultural applications of AR technology
       </video>
     </td>
   </tr>
+  <tr>
+    <td align="center">
+      <a href="https://youtube.com/shorts/1urlgLFhUCE">
+        <img src="https://img.youtube.com/vi/1urlgLFhUCE/hqdefault.jpg" width="320"/>
+      </a>
+      <br/>
+      <b>YouTube Preview (No Compression)</b>
+    </td>
 </table>
+
+
 
